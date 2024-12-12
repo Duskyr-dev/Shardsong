@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Character/ShardsongCharacterBase.h"
-#include "ShardsongEnemy.generated.h"
 #include "Interaction/EnemyInterface.h"
+#include "ShardsongEnemy.generated.h"
 
 /**
  * 
@@ -18,4 +18,7 @@ class SHARDSONG_API AShardsongEnemy : public AShardsongCharacterBase, public IEn
 public:
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool bHighlighted = false;
 };

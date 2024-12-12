@@ -5,10 +5,10 @@
 
 void AShardsongEnemy::HighlightActor()
 {
-
+	bHighlighted = true;
 }
 
 void AShardsongEnemy::UnHighlightActor()
 {
-
+	bHighlighted = false;
 }
