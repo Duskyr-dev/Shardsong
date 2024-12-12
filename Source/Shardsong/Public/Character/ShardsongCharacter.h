@@ -14,4 +14,6 @@ class SHARDSONG_API AShardsongCharacter : public AShardsongCharacterBase
 {
 	GENERATED_BODY()
 	
+public:
+	AShardsongCharacter();
 };
