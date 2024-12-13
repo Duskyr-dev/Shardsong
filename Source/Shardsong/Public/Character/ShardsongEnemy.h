@@ -16,9 +16,7 @@ class SHARDSONG_API AShardsongEnemy : public AShardsongCharacterBase, public IEn
 	GENERATED_BODY()
 	
 public:
+	AShardsongEnemy();
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
-
-	UPROPERTY(BlueprintReadOnly)
-	bool bHighlighted = false;
 };
