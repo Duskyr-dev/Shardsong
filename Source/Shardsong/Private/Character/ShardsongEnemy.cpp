@@ -11,6 +11,7 @@ AShardsongEnemy::AShardsongEnemy()
 
 	AbilitySystemComponent = CreateDefaultSubobject<UShardsongAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
 
 	AttributeSet = CreateDefaultSubobject<UShardsongAttributeSet>("AttributeSet");
 }
