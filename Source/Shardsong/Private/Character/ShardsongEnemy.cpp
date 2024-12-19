@@ -31,3 +31,9 @@ void AShardsongEnemy::UnHighlightActor()
 	Weapon->SetRenderCustomDepth(false);
 	Weapon->SetCustomDepthStencilValue(false);
 }
+
+void AShardsongEnemy::BeginPlay()
+{
+	Super::BeginPlay();
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+}

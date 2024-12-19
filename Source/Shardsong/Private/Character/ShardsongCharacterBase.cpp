@@ -23,7 +23,7 @@ UAbilitySystemComponent* AShardsongCharacterBase::GetAbilitySystemComponent() co
 void AShardsongCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 

@@ -17,6 +17,12 @@ class SHARDSONG_API AShardsongEnemy : public AShardsongCharacterBase, public IEn
 	
 public:
 	AShardsongEnemy();
+
+	// Begin Enemy Interface
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+	// End Enemy Interface
+
+protected:
+	virtual void BeginPlay() override;
 };
