@@ -14,6 +14,11 @@ AShardsongCharacterBase::AShardsongCharacterBase()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+UAbilitySystemComponent* AShardsongCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
 // Called when the game starts or when spawned
 void AShardsongCharacterBase::BeginPlay()
 {

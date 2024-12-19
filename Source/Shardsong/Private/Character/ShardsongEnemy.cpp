@@ -1,12 +1,18 @@
 // Copyright Moonblossom Studios
 
-
 #include "Character/ShardsongEnemy.h"
+#include "AbilitySystem/ShardsongAbilitySystemComponent.h"
+#include "AbilitySystem/ShardsongAttributeSet.h"
 #include "Shardsong/Shardsong.h"
 
 AShardsongEnemy::AShardsongEnemy()
 {
 	GetMesh()->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+	AbilitySystemComponent = CreateDefaultSubobject<UShardsongAbilitySystemComponent>("AbilitySystemComponent");
+	AbilitySystemComponent->SetIsReplicated(true);
+
+	AttributeSet = CreateDefaultSubobject<UShardsongAttributeSet>("AttributeSet");
 }
 
 void AShardsongEnemy::HighlightActor()
