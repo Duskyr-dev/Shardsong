@@ -2,12 +2,14 @@
 
 
 #include "AbilitySystem/ShardsongAttributeSet.h"
-#include "AbilitySystemComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UShardsongAttributeSet::UShardsongAttributeSet()
 {
-
+	InitHealth(100.f);
+	InitMaxHealth(100.f);
+	InitMana(50.f);
+	InitMaxMana(50.f);
 }
 
 void UShardsongAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
