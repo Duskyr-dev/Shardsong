@@ -4,6 +4,8 @@
 #include "Character/ShardsongCharacter.h"
 #include "AbilitySystem/ShardsongAbilitySystemComponent.h"
 #include "Player/ShardsongPlayerState.h"
+#include "UI/HUD/ShardsongHUD.h"
+#include "Player/ShardsongPlayerController.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 AShardsongCharacter::AShardsongCharacter()
@@ -41,4 +43,13 @@ void AShardsongCharacter::InitAbilityActorInfo()
 	ShardsongPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(ShardsongPlayerState, this);
 	AbilitySystemComponent = ShardsongPlayerState->GetAbilitySystemComponent();
 	AttributeSet = ShardsongPlayerState->GetAttributeSet();
+
+	if (AShardsongPlayerController* ShardsongPlayerController = Cast<AShardsongPlayerController>(GetController()))
+	{
+		if (AShardsongHUD* ShardsongHUD = Cast<AShardsongHUD>(ShardsongPlayerController->GetHUD()))
+		{
+			ShardsongHUD->InitOverlay(ShardsongPlayerController, ShardsongPlayerState, AbilitySystemComponent, AttributeSet);
+		}
+	}
+
 }
